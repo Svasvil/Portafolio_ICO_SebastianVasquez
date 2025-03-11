@@ -2,12 +2,12 @@ package Portafolio_DesarolloWEB.portafolio.controller;
 
 import Portafolio_DesarolloWEB.portafolio.domain.Categoria;
 import Portafolio_DesarolloWEB.portafolio.service.CategoriaService;
-import Portafolio_DesarolloWEB.portafolio.service.ProductoService; // Importación corregida
+import Portafolio_DesarolloWEB.portafolio.service.ProductoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable; // Importación agregada
+import org.springframework.web.bind.annotation.PathVariable; 
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller

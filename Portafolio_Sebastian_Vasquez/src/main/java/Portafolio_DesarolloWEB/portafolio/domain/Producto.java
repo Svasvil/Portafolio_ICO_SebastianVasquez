@@ -1,5 +1,9 @@
 package Portafolio_DesarolloWEB.portafolio.domain;
 
+/**
+ * Representa un producto en la base de datos.
+ * Contiene información como descripción, precio, existencias y categoría.
+ */
 import jakarta.persistence.*;
 import java.io.Serializable;
 import lombok.Data;

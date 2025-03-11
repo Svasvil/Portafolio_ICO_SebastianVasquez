@@ -3,6 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
+
+/**
+ * Controlador para gestionar los productos en la aplicacion.
+ * Permite listar, agregar, modificar y eliminar productos.
+ */
+
 package Portafolio_DesarolloWEB.portafolio.controller;
 import Portafolio_DesarolloWEB.portafolio.domain.Producto;
 import Portafolio_DesarolloWEB.portafolio.service.CategoriaService;
@@ -45,7 +51,7 @@ public class ProductoController {
 
     @Autowired
     private FirebaseStorageServiceImpl firebaseStorageService;
-    
+    //hola mundo
     @PostMapping("/guardar")
     public String productoGuardar(Producto producto,
             @RequestParam("imagenFile") MultipartFile imagenFile) {        
