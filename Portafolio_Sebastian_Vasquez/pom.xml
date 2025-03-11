@@ -18,7 +18,7 @@
         <java.version>21</java.version>
     </properties>
 
-    <dependencies>
+     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
@@ -77,15 +77,31 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>            
         </dependency>
-
+        
+        
+  
+        <!-- Google Cloud Storage -->
         <dependency>
-            <groupId>com.google.firebase</groupId>
-            <artifactId>firebase-admin</artifactId>
-            <version>9.1.1</version>
+            <groupId>com.google.cloud</groupId>
+            <artifactId>google-cloud-storage</artifactId>
+            <version>2.30.0</version>
         </dependency>
 
+        <!-- Google Auth Library -->
+        <dependency>
+            <groupId>com.google.auth</groupId>
+            <artifactId>google-auth-library-oauth2-http</artifactId>
+            <version>1.22.0</version>
+        </dependency>
 
-
+        
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>4.4</version>
+        </dependency>
+    
+       
 
     </dependencies>
 
