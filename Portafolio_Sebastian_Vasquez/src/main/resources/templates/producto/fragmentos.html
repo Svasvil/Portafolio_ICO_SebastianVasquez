@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
     <body>
-        
+        <!-- 1 Sección para crear el boton de agregar... llamará a una ventana modal-->
         <section th:fragment="botonesAgregar" class="py-4 mb-4 bg-light">
             <div class="container">
                 <div class="row">
@@ -19,7 +19,7 @@
             </div>
         </section>
 
-    
+        <!-- 2 Fragmento para agregar producto, es la ventana modal -->
         <section th:fragment="agregarProducto">
             <div id="agregarProducto" 
                  class="modal fade" 
@@ -90,6 +90,7 @@
             </div>
         </section>
 
+        <!-- 3 Sección principal para mostrar la informaccion de la entidad producto -->
         <section th:fragment="listadoProductos" id="productos">
             <div class="container">
                 <div class="row">
@@ -147,6 +148,7 @@
             </div>
         </section>
 
+        <!-- 4 Fragmento que se utiliza en la página modifca.html -->
         <section th:fragment="editarProducto">
             <div class="row">
                 <div class="col-md-2"></div>
@@ -226,6 +228,8 @@
                 </div>
             </div>
         </section>
+
+        <!-- 5 Fragmento que se utiliza en el fragmento anterior -->
         <section th:fragment="botonesEditar">
             <div class="container py-4 mb-4 bg-light">
                 <div class="row">
