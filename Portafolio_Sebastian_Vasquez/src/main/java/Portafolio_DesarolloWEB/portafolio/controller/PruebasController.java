@@ -40,8 +40,8 @@ public class PruebasController {
         model.addAttribute("categorias", categorias);
         return "/pruebas/listado";
     }
-    
-      //Los métodos siguientes son para la prueba de consultas ampliadas
+
+    //Los métodos siguientes son para la prueba de consultas ampliadas
     @GetMapping("/listado2")
     public String listado2(Model model) {
         var productos = productoService.getProductos(false);
@@ -51,7 +51,7 @@ public class PruebasController {
 
     @PostMapping("/query1")
     public String consultaQuery1(@RequestParam(value = "precioInf") double precioInf,
-            @RequestParam(value = "precioSup") double precioSup, Model model) {
+                                 @RequestParam(value = "precioSup") double precioSup, Model model) {
         var productos = productoService.findByPrecioBetweenOrderByDescripcion(precioInf, precioSup);
         model.addAttribute("productos", productos);
         model.addAttribute("precioInf", precioInf);
@@ -61,7 +61,7 @@ public class PruebasController {
 
     @PostMapping("/query2")
     public String consultaQuery2(@RequestParam(value = "precioInf") double precioInf,
-            @RequestParam(value = "precioSup") double precioSup, Model model) {
+                                 @RequestParam(value = "precioSup") double precioSup, Model model) {
         var productos = productoService.metodoJPQL(precioInf, precioSup);
         model.addAttribute("productos", productos);
         model.addAttribute("totalProductos", productos.size());
@@ -72,12 +72,20 @@ public class PruebasController {
 
     @PostMapping("/query3")
     public String consultaQuery3(@RequestParam(value = "precioInf") double precioInf,
-            @RequestParam(value = "precioSup") double precioSup, Model model) {
+                                 @RequestParam(value = "precioSup") double precioSup, Model model) {
         var productos = productoService.metodoJPQL(precioInf, precioSup);
         model.addAttribute("productos", productos);
         model.addAttribute("totalProductos", productos.size());
         model.addAttribute("precioInf", precioInf);
         model.addAttribute("precioSup", precioSup);
+        return "/pruebas/listado2";
+    }
+
+    @PostMapping("/query4")
+    public String consultaQuery4(@RequestParam(value = "activo") boolean activo, Model model) {
+        var productos = productoService.findByActivoOrderByDescripcion(activo);
+        model.addAttribute("productos", productos);
+        model.addAttribute("activo", activo);
         return "/pruebas/listado2";
     }
 }
