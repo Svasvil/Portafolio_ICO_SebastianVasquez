@@ -78,16 +78,20 @@
             <artifactId>spring-boot-starter-data-jpa</artifactId>            
         </dependency>
         
-        
+        <dependency>   
+          <groupId>javax.validation</groupId>
+              <artifactId>validation-api</artifactId>
+            <version>2.0.1.Final</version>
+        </dependency>
   
-        <!-- Google Cloud Storage -->
+     
         <dependency>
             <groupId>com.google.cloud</groupId>
             <artifactId>google-cloud-storage</artifactId>
             <version>2.30.0</version>
         </dependency>
 
-        <!-- Google Auth Library -->
+    
         <dependency>
             <groupId>com.google.auth</groupId>
             <artifactId>google-auth-library-oauth2-http</artifactId>
@@ -138,6 +142,8 @@
                     </excludes>
                 </configuration>
             </plugin>
+            
+            
         </plugins>
     </build>
 
